@@ -7,7 +7,7 @@ env:
 
 jobs:
   Testing:
-    runs-on: ubutu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Code checkout
         uses: action/checkout@v4
@@ -55,7 +55,7 @@ jobs:
 
   BUILD_AND_PUBLISH:   
     needs: Testing
-    runs-on: ${{ fromJSON('["ubuntu-latest", "self-hosted"]')[github.repository == 'github/docs-internal'] }}
+    runs-on: ubuntu-latest
     steps:
         - name: Code checkout
         uses: actions/checkout@v4
