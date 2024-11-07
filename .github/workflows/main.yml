@@ -25,12 +25,12 @@ jobs:
           distribution: 'temurin'
           java-version: '11'
 
-            # Install Sonar Scanner directly
-      - name: Install SonarQube Scanner
-        run: |
-          curl -sSLo sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.7.0.2747-linux.zip
-          unzip sonar-scanner.zip -d $HOME
-          echo "$HOME/sonar-scanner-4.7.0.2747-linux/bin" >> $GITHUB_PATH
+      # Install Sonar Scanner directly
+     # - name: Install SonarQube Scanner
+     #   run: |
+      #    curl -sSLo sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.7.0.2747-linux.zip
+       #   unzip sonar-scanner.zip -d $HOME
+        #  echo "$HOME/sonar-scanner-4.7.0.2747-linux/bin" >> $GITHUB_PATH
 
       # Run sonar-scanner
       - name: SonarQube Scan
